@@ -1,6 +1,5 @@
 <?php 
  include("mpdf60/mpdf.php");
- include 
 
  $html = "
  <fieldset>
