@@ -1793,7 +1793,7 @@ $this-&gt;list_marker_offset = \'5.5pt\';<br />$this-&gt;list_symbol_size = \'3.
 <td>
 <p>http://www.redlers.com/downloadfont.html</p>
 <p>(<span>XW Zar fonts)</span></p>
-<p><span>http://wiki.irmug.org/index.php/XWZar</span></p>
+<p><span>http://wiki.irmug.org/PDF_c.php/XWZar</span></p>
 </td>
 <td><a href="http://scripts.sil.org/ofl" target="_blank">SIL Open Font License</a></td>
 <td>Arabic</td>
@@ -1809,7 +1809,7 @@ $this-&gt;list_marker_offset = \'5.5pt\';<br />$this-&gt;list_symbol_size = \'3.
 <p>Estrangelo Edessa</p>
 </td>
 <td>
-<p>http://www.bethmardutho.org/index.php/resources/fonts.html</p>
+<p>http://www.bethmardutho.org/PDF_c.php/resources/fonts.html</p>
 <p>(SyrCOMEdessa.otf)</p>
 </td>
 <td>Adapted licence (free to use/share)<br /></td>

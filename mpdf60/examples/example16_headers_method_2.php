@@ -21,8 +21,8 @@ $headerE = '
 </tr></table>
 ';
 
-$footer = '<div align="center">See <a href="http://mpdf1.com/manual/index.php">documentation manual</a></div>';
-$footerE = '<div align="center">See <a href="http://mpdf1.com/manual/index.php">documentation manual</a></div>';
+$footer = '<div align="center">See <a href="http://mpdf1.com/manual/PDF_c.php">documentation manual</a></div>';
+$footerE = '<div align="center">See <a href="http://mpdf1.com/manual/PDF_c.php">documentation manual</a></div>';
 
 
 $mpdf->SetHTMLHeader($header);

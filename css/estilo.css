@@ -1,14 +1,28 @@
 fieldset{
     width: 750px;
-    margin: 10px auto;
+    margin: 15px auto;
     color: #444;
-    border: 5px solid #ccc;
+    border: 2px solid black;
     font-family: Helvetica;
     padding: 15px;
 }
 
 h1{
     text-align: center;
+    font-size: 12px;
+}
+
+h2{
+    text-align: center;
+    font-size: 11px;
+}
+
+div{
+    border: 1px solid;
+}
+
+div.principal{
+    padding-bottom: 119%;
 }
 
 p.sub-titulo{
@@ -21,4 +35,9 @@ p.sub-titulo{
 
 .center{
     text-align: center;
+}
+
+/* Classe para o estilo do cabeçalho da Tabela */
+.header{
+    background: silver;
 }
