@@ -21,10 +21,6 @@ div{
     border: 1px solid;
 }
 
-div.principal{
-    padding-bottom: 119%;
-}
-
 p.sub-titulo{
     font-size: 20px;
 }
@@ -37,7 +33,21 @@ p.sub-titulo{
     text-align: center;
 }
 
+/* Contador de itens na coluna*/
+.count {
+
+}
+
 /* Classe para o estilo do cabeçalho da Tabela */
 .header{
     background: silver;
+}
+/* Quebra dos cabeçalhos das colunas da tabela de itens*/
+#quebra {
+    width: 14%;
+}
+
+/* Quebra dos cabeçalhos das colunas da tabela de itens*/
+#total {
+    width: 300%;
 }
