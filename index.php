@@ -8,7 +8,6 @@
 
     require_once "PDF_c.php";
 
-
-    $report = new reportCliente();
+    $report = new PDF_c("css/estilo.css", "Relatório de Material de Escritório"); //Parâmetros do pdf
     $report->GerarPDF_M_E(); // chama a construção do pdf.
     $report->Exibir("Relatório de Material de Escritório"); //nome do arquivo relatório que será salvo.
