@@ -38,6 +38,11 @@ h1{
     font-size: 12px;
 }
 
+h1.entrada{
+    text-align: center;
+    font-size: 17px;
+}
+
 h2{
     text-align: center;
     font-size: 11px;
@@ -63,6 +68,12 @@ p.sub-titulo{
 .header{
     background: silver;
 }
+
+/* Classe para o estilo do cabeçalho de Fornecedor*/
+.header_1 {
+
+}
+
 /* Quebra dos cabeçalhos das colunas da tabela de itens*/
 #quebra {
     width: 14%;

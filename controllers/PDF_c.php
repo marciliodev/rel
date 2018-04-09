@@ -112,7 +112,7 @@ class PDF_c extends mpdf {
         $data = date('d/m/Y');
         $color = null;
         $html .= "
-        <fieldset class='M_A'>
+        <fieldset class='R_M_A'>
         <img src=\"img\logo2.jpg\">
         <div class='header'>
             <h1 id='h1_R_M_A'>Relação de Materiais do Almoxarifado $data</h1>
@@ -223,12 +223,9 @@ class PDF_c extends mpdf {
         $html .= "
         <fieldset class='R_M_E'>
         <!-- <img src=\"img\logo1.jpg\"> -->
-        <div class='header'>
-            <h1>ENTRADA</h1>
-        </div>
-        <div class='header'>
-            <b>Fornecedor:</b>
-        </div>";
+            <h1 class='entrada'>ENTRADA</h1>
+            <p><b>Fornecedor:<b> NOME DO FORNECEDOR - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nº Documento:000001/2018</b></b><br>
+            <b>Data:</b> $data";
         $html .= " <table border='1' width='1000' align='center'>
         <tr class='header'>
             <th class='center'>Código</th>
@@ -251,8 +248,8 @@ class PDF_c extends mpdf {
             $html .= "<td class='left'>{$reg['disc_produto']}</td>"; //descrição do produto
             $html .= "<td class='center'>{$reg['qt_total']}</td>"; //quantidade total do estoque
             $html .= "<td class='center'>{$reg['qt_atual']}</td>"; //quantidade atual do estoque
-            $html .= "<td class='left'>R$ {$reg['vl_unitario']}</td>"; //valor unitário do produto
-            $html .= "<td class='left'>R$ {$reg['vl_total']}</td>"; //valor total do produto
+            $html .= "<td class='left'>{$reg['vl_unitario']}</td>"; //valor unitário do produto
+            $html .= "<td class='left'>{$reg['vl_total']}</td>"; //valor total do produto
             $html .= "<td class='center'></td>"; //valor do lote
             $html .= "<td class='left'>-</td>"; //valor da validade
             $color = !$color;
@@ -264,11 +261,13 @@ class PDF_c extends mpdf {
             <td></td>
             <td></td>
             <td></td>
-        <td class='center'>TOTAL</td>";
+        <td class='left'>TOTAL</td>";
         //Soma do total do vl_total de cada item da lista
         $soma = "select sum(vl_total) from produtos";
         foreach ($this->pdo->query($soma) as $resultado);
-        $html .= "<td class='center'>R$ {$resultado[0]}</td>
+        $html .= "<td class='left'>{$resultado[0]}</td>
+            <td></td>
+            <td></td>
         </tr>
         </table>
         </fieldset>";
