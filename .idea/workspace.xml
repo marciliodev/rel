@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="344d57a2-b4da-47c2-8320-967c0afe3504" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/PDF_c.php" beforeDir="false" afterPath="$PROJECT_DIR$/PDF_c.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/controllers/PDF_c.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PDF_c.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,20 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PDF_c.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/PDF_c.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1880">
-              <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="estilo.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/estilo.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1040">
-              <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+            <state relative-caret-position="319">
+              <caret line="91" column="1" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -34,8 +29,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+            <state relative-caret-position="60">
+              <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -49,6 +44,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PDF_c.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/PDF_c.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -58,6 +62,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>total</find>
+      <find>quebra</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -65,9 +75,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/conexao/Conexao.php" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/css/estilo.css" />
         <option value="$PROJECT_DIR$/PDF_c.php" />
+        <option value="$PROJECT_DIR$/models/Pdf.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/controllers/PDF_c.php" />
       </list>
     </option>
   </component>
@@ -78,9 +90,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="672" />
-    <option name="width" value="694" />
-    <option name="height" value="768" />
+    <option name="x" value="676" />
+    <option name="width" value="697" />
+    <option name="height" value="775" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -97,6 +109,11 @@
               <item name="rel" type="b2602c69:ProjectViewProjectNode" />
               <item name="rel" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="rel" type="b2602c69:ProjectViewProjectNode" />
+              <item name="rel" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -106,7 +123,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../relatorios" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../protocolo" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -114,6 +131,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\rel\controllers" />
       <recent name="C:\xampp\htdocs\rel" />
     </key>
   </component>
@@ -141,27 +159,28 @@
       <updated>1522951929710</updated>
       <workItem from="1522951931975" duration="124000" />
       <workItem from="1523016415037" duration="15434000" />
-      <workItem from="1523283758382" duration="44000" />
+      <workItem from="1523283758382" duration="9621000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24027000" />
+    <option name="totallyTimeSpent" value="33604000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.1633888" />
       <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="right" id="Database" order="0" />
       <window_info anchor="bottom" id="Database Changes" order="1" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="4" />
       <window_info anchor="bottom" id="Run" order="7" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" visible="true" weight="0.1633888" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="bottom" id="Find" order="6" weight="0.32972136" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -170,7 +189,6 @@
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="6" weight="0.32972136" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,7 +198,7 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/PDF_c.php">
+    <entry file="file://$PROJECT_DIR$/controllers/PDF_c.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1980">
           <caret line="99" column="38" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
@@ -208,7 +226,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PDF_c.php">
+    <entry file="file://$PROJECT_DIR$/controllers/PDF_c.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="900">
           <caret line="45" column="4" selection-start-line="45" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
@@ -236,6 +254,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assents/css/estilo.css" />
+    <entry file="file://$PROJECT_DIR$/controllers/PDF_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/standard/standard_5.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="1046" column="9" selection-start-line="1046" selection-start-column="9" selection-end-line="1046" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -243,37 +276,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assents/css/estilo.css" />
-    <entry file="file://$PROJECT_DIR$/PDF_c.php">
+    <entry file="file://$PROJECT_DIR$/css/estilo.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/conexao/Conexao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mpdf60/mpdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="8173" column="9" selection-start-line="8173" selection-start-column="9" selection-end-line="8173" selection-end-column="9" />
-          <folding>
-            <element signature="e#68#72#0" expanded="true" />
-            <element signature="e#68#72#0" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+        <state relative-caret-position="319">
+          <caret line="91" column="1" selection-start-line="91" selection-start-column="1" selection-end-line="91" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -284,17 +290,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/estilo.css">
+    <entry file="file://$PROJECT_DIR$/mpdf60/mpdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1040">
-          <caret line="52" column="1" selection-start-line="52" selection-start-column="1" selection-end-line="52" selection-end-column="1" />
+        <state relative-caret-position="199">
+          <caret line="8173" column="9" selection-start-line="8173" selection-start-column="9" selection-end-line="8173" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PDF_c.php">
+    <entry file="file://$PROJECT_DIR$/models/Pdf.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1880">
-          <caret line="136" column="1" selection-start-line="136" selection-start-column="1" selection-end-line="136" selection-end-column="1" />
+        <state relative-caret-position="100">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conexao/Conexao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="24" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/PDF_c.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="26" lean-forward="true" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
         </state>
       </provider>
     </entry>

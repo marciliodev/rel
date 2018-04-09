@@ -1,5 +1,31 @@
-fieldset{
+fieldset.R_M_E{
     width: 750px;
+    margin: 15px auto;
+    color: #444;
+    border: 2px solid black;
+    font-family: Helvetica;
+    padding: 15px;
+}
+
+fieldset.R_M_A{
+    width: 900px;
+    margin: 15px auto;
+    color: #444;
+    border: 2px solid black;
+    font-family: Helvetica;
+    padding: 15px;
+}
+
+fieldset.R_E{
+    width: 900px;
+    margin: 15px auto;
+    color: #444;
+    font-family: Helvetica;
+    padding: 15px;
+}
+
+fieldset.R_M_S_V{
+    width: 900px;
     margin: 15px auto;
     color: #444;
     border: 2px solid black;
@@ -33,11 +59,6 @@ p.sub-titulo{
     text-align: center;
 }
 
-/* Contador de itens na coluna*/
-.count {
-
-}
-
 /* Classe para o estilo do cabeçalho da Tabela */
 .header{
     background: silver;
@@ -51,3 +72,34 @@ p.sub-titulo{
 #total {
     width: 300%;
 }
+
+/* h1 do pdf de material de serviço vascular */
+#h1_R_S_V {
+    font-size: 18px;
+}
+
+/* h1 do pdf de material de serviço vascular */
+#h1_R_M_A {
+    font-size: 18px;
+}
+
+/* th do pdf de material de serviço vascular */
+#th_desc_R_S_V {
+    width: 50%;
+}
+
+/* th do pdf de entrada */
+#th_desc_R_E {
+    width: 50%;
+}
+
+/* th do pdf de material de serviço vascular */
+#th_desc_R_M_A {
+    width: 50%;
+}
+
+/* th do pdf de entrada*/
+#th_vl_custo_R_M_A {
+    width: 15%;
+}
+

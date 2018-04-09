@@ -6,8 +6,9 @@
  * Time: 09:14
  */
 
-    require_once "PDF_c.php";
+    require_once ('controllers/PDF_c.php'); //requisita o controlador
 
-    $report = new PDF_c("css/estilo.css", "Relatório de Material de Escritório"); //Parâmetros do pdf
-    $report->GerarPDF_M_E(); // chama a construção do pdf.
-    $report->Exibir("Relatório de Material de Escritório"); //nome do arquivo relatório que será salvo.
+    //Geração do PDF com base no tipo de relatório repassado por parâmetro
+    $report = new PDF_c("css/estilo.css", "Relatório"); //Parâmetros do pdf
+    $report->GerarPDF(4); // chama a construção do pdf.
+    $report->Exibir("Relatório"); //nome do arquivo relatório que será salvo.
