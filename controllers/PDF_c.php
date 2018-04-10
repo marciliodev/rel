@@ -58,18 +58,18 @@ class PDF_c extends mpdf {
         <fieldset class='R_M_E'>
         <img src=\"img\logo1.jpg\">
         <div class='header'>
-            <h2>FUNDACAO DE SAUDE DE VITORIA DA CONQUISTA $data</h2>
+            <h2>FUNDAÇÃO DE SAÚDE DE VITÓRIA DA CONQUISTA $data</h2>
         </div>
         <div class='header'>
-            <h2>MATERIAL DE ESCRITORIO</h2>
+            <h2>MATERIAL DE ESCRITÓRIO</h2>
         </div>";
         $html .= " <table border='1' width='1000' align='center'>
         <tr class='header'>
             <th class='center'>ITENS</th>
-            <th class='center'>DISCRIMINACAO DETALHADA DO PRODUTO</th>
+            <th class='center'>DISCRIMINAÇÃO DETALHADA DO PRODUTO</th>
             <th id='quebra' class='center'>ESTOQUE DO ALMOXARIFADO</th>
             <th id='quebra' class='center'>ESTOQUE ATUAL</th>
-            <th class='center'>VALOR UNITARIO</th>
+            <th class='center'>VALOR UNITÁRIO</th>
             <th class='center'>VALOR TOTAL</th> 
         </tr>";
 
@@ -224,7 +224,7 @@ class PDF_c extends mpdf {
         <fieldset class='R_M_E'>
         <img src=\"img\logo1.jpg\">
         <div class='entrada'>
-            <h1 class='entrada'>RELATÓRIO DE ENTRADA</h1>
+            <h1 class='entrada'>Relatório de Entrada</h1>
             <h2 class='entrada'><b>&nbsp;Fornecedor:</b> NOME DO FORNECEDOR - <br>
             &nbsp;<b>Nº Documento:</b> 000001/2018<br>
             <b>&nbsp;Data:</b> $data</h2>
@@ -289,10 +289,6 @@ class PDF_c extends mpdf {
                 // Geração do PDF Material de Escritório
                 $this->pdf = new mPDF('utf-8', 'A4');
                 $css = file_get_contents("css/estilo.css");
-                //Trata caracteres especiais sem gerar erro
-                $this->pdf->allow_charset_conversion = true;
-                $this->pdf->charset_in='iso-8859-1';
-                $this->pdf->charset_in = 'windows-1252';
                 //Parâmetros do Corpo do PDF
                 $this->pdf->SetDisplayMode('fullpage');
                 $this->pdf->WriteHTML($css, 1);
@@ -300,6 +296,10 @@ class PDF_c extends mpdf {
                 //Saída do PDF
                 ob_end_clean(); //limpar objeto antes da geração do PDF
                 $this->pdf->Output();
+                //Trata caracteres especiais sem gerar erro
+                $this->pdf->allow_charset_conversion = true;
+                //$this->pdf->charset_in='iso-8859-1';
+                $this->pdf->charset_in = 'windows-1252';
                 //Geração do arquivo temporário do PDF para não gerar atrasos
                 $this->pdf = new mPDF(['tempDir' => __DIR__ . '/tmp']);
                 exit;
@@ -308,10 +308,6 @@ class PDF_c extends mpdf {
                 // Geração do PDF Material do Almoxarifado
                 $this->pdf = new mPDF('utf-8', 'A4-L'); //A4-L Vertical
                 $css = file_get_contents("css/estilo.css");
-                //Trata caracteres especiais sem gerar erro
-                $this->pdf->allow_charset_conversion = true;
-                $this->pdf->charset_in='iso-8859-1';
-                $this->pdf->charset_in = 'windows-1252';
                 //Parâmetros do Corpo do PDF
                 $this->pdf->SetDisplayMode('fullpage');
                 $this->pdf->WriteHTML($css, 1);
@@ -319,6 +315,10 @@ class PDF_c extends mpdf {
                 //Saída do PDF
                 ob_end_clean(); //limpar objeto antes da geração do PDF
                 $this->pdf->Output();
+                //Trata caracteres especiais sem gerar erro
+                $this->pdf->allow_charset_conversion = true;
+                //$this->pdf->charset_in='iso-8859-1';
+                $this->pdf->charset_in = 'windows-1252';
                 //Geração do arquivo temporário do PDF para não gerar atrasos
                 $this->pdf = new mPDF(['tempDir' => __DIR__ . '/tmp']);
                 exit;
@@ -327,10 +327,6 @@ class PDF_c extends mpdf {
                 // Geração do PDF Materila de Serviço Vascular
                 $this->pdf = new mPDF('utf-8', 'A4-L'); //A4-L Vertical
                 $css = file_get_contents("css/estilo.css");
-                //Trata caracteres especiais sem gerar erro
-                $this->pdf->allow_charset_conversion = true;
-                $this->pdf->charset_in='iso-8859-1';
-                $this->pdf->charset_in = 'windows-1252';
                 //Parâmetros do Corpo do PDF
                 $this->pdf->SetDisplayMode('fullpage');
                 $this->pdf->WriteHTML($css, 1);
@@ -338,6 +334,10 @@ class PDF_c extends mpdf {
                 //Saída do PDF
                 ob_end_clean(); //limpar objeto antes da geração do PDF
                 $this->pdf->Output();
+                //Trata caracteres especiais sem gerar erro
+                $this->pdf->allow_charset_conversion = true;
+                //$this->pdf->charset_in='iso-8859-1';
+                $this->pdf->charset_in = 'windows-1252';
                 //Geração do arquivo temporário do PDF para não gerar atrasos
                 $this->pdf = new mPDF(['tempDir' => __DIR__ . '/tmp']);
                 exit;
@@ -346,10 +346,6 @@ class PDF_c extends mpdf {
                 // Geração do PDF Entrada
                 $this->pdf = new mPDF('utf-8', 'A4');
                 $css = file_get_contents("css/estilo.css");
-                //Trata caracteres especiais sem gerar erro
-                $this->pdf->allow_charset_conversion = true;
-                $this->pdf->charset_in='iso-8859-1';
-                $this->pdf->charset_in = 'windows-1252';
                 //Parâmetros do Corpo do PDF
                 $this->pdf->SetDisplayMode('fullpage');
                 $this->pdf->WriteHTML($css, 1);
@@ -357,6 +353,10 @@ class PDF_c extends mpdf {
                 //Saída do PDF
                 ob_end_clean(); //limpar objeto antes da geração do PDF
                 $this->pdf->Output();
+                //Trata caracteres especiais sem gerar erro
+                //$this->pdf->charset_in='iso-8859-1';
+                $this->pdf->allow_charset_conversion = true;
+                $this->pdf->charset_in = 'windows-1252';
                 //Geração do arquivo temporário do PDF para não gerar atrasos
                 $this->pdf = new mPDF(['tempDir' => __DIR__ . '/tmp']);
                 exit;

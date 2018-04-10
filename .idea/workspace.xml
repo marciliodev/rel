@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="344d57a2-b4da-47c2-8320-967c0afe3504" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/PDF_c.php" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/PDF_c.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/estilo.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/estilo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +17,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="estilo.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="estilo.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/estilo.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="460">
@@ -46,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PDF_c.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PDF_c.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/PDF_c.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="739">
-              <caret line="208" column="62" selection-start-line="208" selection-start-column="62" selection-end-line="208" selection-end-column="62" />
+            <state relative-caret-position="-1721">
+              <caret line="223" column="32" lean-forward="true" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
               <folding>
                 <element signature="e#209#215#0" expanded="true" />
                 <element signature="e#222#228#0" expanded="true" />
@@ -84,9 +82,9 @@
         <option value="$PROJECT_DIR$/conexao/Conexao.php" />
         <option value="$PROJECT_DIR$/PDF_c.php" />
         <option value="$PROJECT_DIR$/models/Pdf.php" />
+        <option value="$PROJECT_DIR$/css/estilo.css" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controllers/PDF_c.php" />
-        <option value="$PROJECT_DIR$/css/estilo.css" />
       </list>
     </option>
   </component>
@@ -167,12 +165,12 @@
       <workItem from="1522951931975" duration="124000" />
       <workItem from="1523016415037" duration="15434000" />
       <workItem from="1523283758382" duration="12207000" />
-      <workItem from="1523361294555" duration="8181000" />
+      <workItem from="1523361294555" duration="9100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44371000" />
+    <option name="totallyTimeSpent" value="45290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -365,6 +363,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/estilo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -374,20 +379,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/PDF_c.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="739">
-          <caret line="208" column="62" selection-start-line="208" selection-start-column="62" selection-end-line="208" selection-end-column="62" />
+        <state relative-caret-position="-1721">
+          <caret line="223" column="32" lean-forward="true" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
           <folding>
             <element signature="e#209#215#0" expanded="true" />
             <element signature="e#222#228#0" expanded="true" />
             <element signature="e#657#663#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/estilo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
         </state>
       </provider>
     </entry>
