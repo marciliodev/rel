@@ -94,11 +94,11 @@ class PDF_c extends mpdf {
             <td></td>
             <td></td>
             <td></td>
-        <td class='center'>TOTAL</td>";
+        <td class='center'><b>TOTAL</b></td>";
         //Soma do total do vl_total de cada item da lista
         $soma = "select sum(vl_total) from produtos";
         foreach ($this->pdo->query($soma) as $resultado);
-        $html .= "<td class='center'>R$ {$resultado[0]}</td>
+        $html .= "<td class='center'><b>R$ {$resultado[0]}</b></td>
         </tr>
         </table>
         </fieldset>";
@@ -148,11 +148,11 @@ class PDF_c extends mpdf {
             <td></td>
             <td></td>
             <td></td>
-        <td class='center'>TOTAL</td>";
+        <td class='center'><b>TOTAL</b></td>";
         //Soma do total do vl_total de cada item da lista
         $soma = "select sum(vl_total) from produtos";
         foreach ($this->pdo->query($soma) as $resultado);
-        $html .= "<td class='center'>R$ {$resultado[0]}</td>
+        $html .= "<td class='center'><b>R$ {$resultado[0]}</b></td>
         </tr>
         </table>
         </fieldset>";
@@ -202,11 +202,11 @@ class PDF_c extends mpdf {
             <td></td>
             <td></td>
             <td></td>
-        <td class='center'>TOTAL</td>";
+        <td class='center'><b>TOTAL</b></td>";
         //Soma do total do vl_total de cada item da lista
         $soma = "select sum(vl_total) from produtos";
         foreach ($this->pdo->query($soma) as $resultado);
-        $html .= "<td class='center'>R$ {$resultado[0]}</td>
+        $html .= "<td class='center'><b>R$ {$resultado[0]}</b></td>
         </tr>
         </table>
         </fieldset>";

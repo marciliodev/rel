@@ -33,6 +33,14 @@ fieldset.R_M_S_V{
     padding: 15px;
 }
 
+/*
+/* Classe coloca a cor de fundo para zebrar as linhas
+.zebra{
+    background: lightgray;
+}
+
+*/
+
 h1{
     text-align: center;
     font-size: 12px;
