@@ -40,7 +40,12 @@ h1{
 
 h1.entrada{
     text-align: center;
-    font-size: 17px;
+    font-size: 15px;
+}
+
+h2.entrada{
+    text-align: left;
+    font-size: 13px;
 }
 
 h2{
@@ -56,6 +61,11 @@ p.sub-titulo{
     font-size: 20px;
 }
 
+div.entrada{
+    background: silver;
+    height: 20px;
+}
+
 .direita{
     text-align: right;
 }
@@ -69,10 +79,19 @@ p.sub-titulo{
     background: silver;
 }
 
-/* Classe para o estilo do cabeçalho de Fornecedor*/
-.header_1 {
-
+/* Classe para o estilo do cabeçalho da Tabela de R_E */
+tr.header_desc{
+    background: silver;
+    font-size: 12px;
 }
+
+/* Classe para o estilo do cabeçalho de Fornecedor*/
+div.header_1 {
+    background: silver;
+    font-size: 12px;
+    height: 10px;
+}
+
 
 /* Quebra dos cabeçalhos das colunas da tabela de itens*/
 #quebra {
@@ -99,9 +118,14 @@ p.sub-titulo{
     width: 50%;
 }
 
+/* th do pdf de cod de R_E */
+#th_cod_R_E {
+    width: 8%;
+}
+
 /* th do pdf de entrada */
 #th_desc_R_E {
-    width: 50%;
+    width: 60%;
 }
 
 /* th do pdf de material de serviço vascular */
@@ -109,8 +133,34 @@ p.sub-titulo{
     width: 50%;
 }
 
-/* th do pdf de entrada*/
-#th_vl_custo_R_M_A {
+/* th do pdf de vl_custo de R_E*/
+#th_vl_custo_R_E {
+    width: 10%;
+}
+
+/* th do pdf de vl_total de R_E*/
+#th_vl_total_R_E {
+    width: 10%;
+}
+
+/* th do pdf de qtd de R_E*/
+#th_qtd_R_E {
+    width: 8%;
+}
+
+/* th do pdf de und R_E*/
+#th_und_R_E {
+    width: 8%;
+}
+
+/* th do pdf de lote R_E*/
+#th_lote_R_E {
+    width: 5%;
+}
+
+/* th do pdf de validade R_E*/
+#th_validade_R_E {
     width: 15%;
 }
+
 

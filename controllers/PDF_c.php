@@ -222,20 +222,23 @@ class PDF_c extends mpdf {
 
         $html .= "
         <fieldset class='R_M_E'>
-        <!-- <img src=\"img\logo1.jpg\"> -->
-            <h1 class='entrada'>ENTRADA</h1>
-            <p><b>Fornecedor:<b> NOME DO FORNECEDOR - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Nº Documento:000001/2018</b></b><br>
-            <b>Data:</b> $data";
+        <img src=\"img\logo1.jpg\">
+        <div class='entrada'>
+            <h1 class='entrada'>RELATÓRIO DE ENTRADA</h1>
+            <h2 class='entrada'><b>&nbsp;Fornecedor:</b> NOME DO FORNECEDOR - <br>
+            &nbsp;<b>Nº Documento:</b> 000001/2018<br>
+            <b>&nbsp;Data:</b> $data</h2>
+        </div>";
         $html .= " <table border='1' width='1000' align='center'>
-        <tr class='header'>
-            <th class='center'>Código</th>
+        <tr class='header_desc'>
+            <th id='th_cod_R_E' class='center'>Código</th>
             <th id='th_desc_R_E' class='center'>Descrição</th>
-            <th class='center'>Qtd</th>
-            <th class='center'>Und.</th>
-            <th id='th_vl_custo_R_M_A' class='center'>Valor de Custo R$</th>
-            <th class='center'>Valor Total R$</th> 
-            <th class='center'>Lote</th> 
-            <th class='center'>Validade</th> 
+            <th id='th_qtd_R_E' class='center'>Qtd</th>
+            <th id='th_und_R_E' class='center'>Und.</th>
+            <th id='th_vl_custo_R_E' class='center'>Valor de Custo R$</th>
+            <th id='th_vl_total_R_E' class='center'>Valor Total R$</th> 
+            <th id='th_lote_R_E' class='center'>Lote</th> 
+            <th id='th_validade_R_E' class='center'>Validade</th> 
         </tr>";
 
         //Chamada do SQL
@@ -261,11 +264,11 @@ class PDF_c extends mpdf {
             <td></td>
             <td></td>
             <td></td>
-        <td class='left'>TOTAL</td>";
+        <td class='left'><b>TOTAL</b></td>";
         //Soma do total do vl_total de cada item da lista
         $soma = "select sum(vl_total) from produtos";
         foreach ($this->pdo->query($soma) as $resultado);
-        $html .= "<td class='left'>{$resultado[0]}</td>
+        $html .= "<td class='left'><b>{$resultado[0]}</b></td>
             <td></td>
             <td></td>
         </tr>
