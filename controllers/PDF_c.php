@@ -56,19 +56,16 @@ class PDF_c extends mpdf {
         $color = null;
         $html .= "
         <fieldset class='R_M_E'>
-        <img src=\"img\logo1.jpg\">
-        <div class='header'>
-            <h2>FUNDAÇÃO DE SAÚDE DE VITÓRIA DA CONQUISTA $data</h2>
-        </div>
-        <div class='header'>
-            <h2>MATERIAL DE ESCRITÓRIO</h2>
+        <img src=\"img\logo2.jpg\" class='logo'>
+        <div class='cabecalho_R_M_E'>
+            <h1>FUNDAÇÃO DE SAÚDE DE VITÓRIA DA CONQUISTA $data<br>MATERIAL DE ESCRITÓRIO</h1>
         </div>";
-        $html .= " <table border='1' width='1000' align='center'>
-        <tr class='header'>
+        $html .= " <table width='1000' align='center'>
+        <tr class='header_tr'>
             <th class='center'>ITENS</th>
-            <th class='center'>DISCRIMINAÇÃO DETALHADA DO PRODUTO</th>
-            <th id='quebra' class='center'>ESTOQUE DO ALMOXARIFADO</th>
-            <th id='quebra' class='center'>ESTOQUE ATUAL</th>
+            <th class='left'>DISCRIMINAÇÃO DETALHADA DO PRODUTO</th>
+            <th id='quebra_qtd_alm_R_M_E' class='center'>QTD. ALMOXARIFADO</th>
+            <th id='quebra_qtd_atual_R_M_E' class='center'>QTD. ATUAL</th>
             <th class='center'>VALOR UNITÁRIO</th>
             <th class='center'>VALOR TOTAL</th> 
         </tr>";
@@ -140,6 +137,7 @@ class PDF_c extends mpdf {
             $html .= "<td class='center'>R$ {$reg['vl_unitario']}</td>"; //valor unitário do produto
             $html .= "<td class='center'>R$ {$reg['vl_total']}</td>"; //valor total do produto
             $color = !$color;
+
         endforeach;
 
         $html .= ";
@@ -281,7 +279,7 @@ class PDF_c extends mpdf {
     // Gerar Relatório de Material de Escritório
     public function GerarPDF($tipo) {
 
-        $this->$tipo = 0;
+        $this->$tipo = 0; //tipo que será passado no parâmetro da construção do pdf no index.php
 
         //Verificar qual relatório será gerado
         switch ($tipo){

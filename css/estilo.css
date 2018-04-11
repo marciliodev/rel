@@ -1,17 +1,16 @@
 fieldset.R_M_E{
-    width: 750px;
-    margin: 15px auto;
+    width: 785px;
+    height: 1600px;
     color: #444;
-    border: 2px solid black;
     font-family: Helvetica;
-    padding: 15px;
+    padding: -58px;
+    margin: 5px;
 }
 
 fieldset.R_M_A{
     width: 900px;
     margin: 15px auto;
     color: #444;
-    border: 2px solid black;
     font-family: Helvetica;
     padding: 15px;
 }
@@ -28,18 +27,21 @@ fieldset.R_M_S_V{
     width: 900px;
     margin: 15px auto;
     color: #444;
-    border: 2px solid black;
     font-family: Helvetica;
     padding: 15px;
 }
 
-/*
-/* Classe coloca a cor de fundo para zebrar as linhas
+/* Classe coloca a cor de fundo para zebrar as linhas */
 .zebra{
     background: lightgray;
+    margin: 2px;
 }
 
-*/
+/* Classe coloca a cor de fundo para zebrar as linhas */
+.logo{
+    width: 100%;
+    height: 7%;
+}
 
 h1{
     text-align: center;
@@ -74,7 +76,7 @@ div.entrada{
     height: 20px;
 }
 
-.direita{
+.right{
     text-align: right;
 }
 
@@ -82,9 +84,25 @@ div.entrada{
     text-align: center;
 }
 
+.left{
+    text-align: left;
+}
+
 /* Classe para o estilo do cabeçalho da Tabela */
 .header{
     background: silver;
+    padding: -1%;
+}
+
+/* Classe para o estilo do cabeçalho da Tabela */
+.header_tr{
+    background: #ddccff;
+}
+
+/* Classe para o estilo do cabeçalho da Tabela */
+.cabecalho_R_M_E{
+    padding: -1%;
+    border: 0px;
 }
 
 /* Classe para o estilo do cabeçalho da Tabela de R_E */
@@ -104,6 +122,16 @@ div.header_1 {
 /* Quebra dos cabeçalhos das colunas da tabela de itens*/
 #quebra {
     width: 14%;
+}
+
+/* Quebra dos cabeçalhos das colunas da tabela de itens*/
+#quebra_qtd_alm_R_M_E {
+    width: 18%;
+}
+
+/* Quebra dos cabeçalhos das colunas da tabela de itens*/
+#quebra_qtd_atual_R_M_E {
+    width: 10%;
 }
 
 /* Quebra dos cabeçalhos das colunas da tabela de itens*/
@@ -133,7 +161,7 @@ div.header_1 {
 
 /* th do pdf de entrada */
 #th_desc_R_E {
-    width: 60%;
+    width: 40%;
 }
 
 /* th do pdf de material de serviço vascular */
