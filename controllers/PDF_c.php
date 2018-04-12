@@ -83,50 +83,57 @@ class PDF_c extends mpdf {
 
         $data = date('d/m/Y');
         $color = null;
+
         $html .= "
-        <fieldset class='RME'>
+        <header class='RME'>
         <img src=\"img\logo2.jpg\" class='logo'>
         <div class='cabecalho_RME'>
             <h1>FUNDAÇÃO DE SAÚDE DE VITÓRIA DA CONQUISTA $data<br>MATERIAL DE ESCRITÓRIO</h1>
-        </div>";
-        $html .= " <table width='1000' align='center'>
-        <tr class='header_tr'>
-            <th class='center'>ITENS</th>
-            <th class='left'>DISCRIMINAÇÃO DETALHADA DO PRODUTO</th>
-            <th id='quebra_qtd_alm_RME' class='center'>QTD. ALMOXARIFADO</th>
-            <th id='quebra_qtd_atual_RME' class='center'>QTD. ATUAL</th>
-            <th class='center'>VALOR UNITÁRIO</th>
-            <th class='center'>VALOR TOTAL</th> 
-        </tr>";
+        </div>
+        </header>";
 
-            //Chamada do SQL
-            $sql = "select * from produtos";
-            foreach ($this->pdo->query($sql) as $reg):
-                $html .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
-                $html .= "<td class='center'>";
-                $html .= $this->contItens(); //chama a função que conta os itens
-                $html .= "</td>"; //Itens do relatório
-                $html .= "<td class='left'>{$reg['disc_produto']}</td>"; //descrição do produto
-                $html .= "<td class='center'>{$reg['qt_total']}</td>"; //quantidade total do estoque
-                $html .= "<td class='center'>{$reg['qt_atual']}</td>"; //quantidade atual do estoque
-                $html .= "<td class='center'>R$ {$reg['vl_unitario']}</td>"; //valor unitário do produto
-                $html .= "<td class='center'>R$ {$reg['vl_total']}</td>"; //valor total do produto
-                $color = !$color;
-            endforeach;
-        $html .= ";
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        <td class='center'><b>TOTAL</b></td>";
+        $html .= " 
+        <fieldset class='RME'>
+            <table class='RME'>
+                <tr class='fieldset_tr'>
+                <th class='fieldset_th_itens' align='center'>ITENS</th>
+                <th class='fieldset_th_discriminacao' align='left'>DISCRIMINAÇÃO DETALHADA DO PRODUTO</th>
+                <th class='fieldset_th_qt_alm' align='center'>QTD. ALMOXARIFADO</th>
+                <th class='fieldset_th_qt_est' align='center'>QTD. ATUAL</th>
+                <th class='fieldset_th_vl_uni' align='center'>VALOR UNITÁRIO</th>
+                <th class='fieldset_th_vl_total' align='center'>VALOR TOTAL</th> 
+                </tr>";
+
+                //Chamada do SQL
+                $sql = "select * from produtos";
+                foreach ($this->pdo->query($sql) as $reg):
+                    $html .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
+                    $html .= "<td class='fieldset_th_itens' align='center'>";
+                    $html .= $this->contItens(); //chama a função que conta os itens
+                    $html .= "</td>"; //Itens do relatório
+                    $html .= "<td class='fieldset_th_discriminacao' align='left'>{$reg['disc_produto']}</td>"; //descrição do produto
+                    $html .= "<td class='fieldset_th_qt_alm' align='center'>{$reg['qt_total']}</td>"; //quantidade total do estoque
+                    $html .= "<td class='fieldset_th_qt_est' align='center'>{$reg['qt_atual']}</td>"; //quantidade atual do estoque
+                    $html .= "<td class='fieldset_th_qt_uni' align='center'>R$ {$reg['vl_unitario']}</td>"; //valor unitário do produto
+                    $html .= "<td class='fieldset_th_vl_total' align='center'>R$ {$reg['vl_total']}</td>"; //valor total do produto
+                    $color = !$color;
+                endforeach;
+
+        $html .= "
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class='fieldset_td_total' align='center'><b>TOTAL</b></td>";
+
         //Soma do total do vl_total de cada item da lista
         $soma = "select sum(vl_total) from produtos";
         foreach ($this->pdo->query($soma) as $resultado);
-        $html .= "<td class='center'><b>R$ {$resultado[0]}</b></td>
-        </tr>
-        </table>
-        </fieldset>";
+        $html .= "<td class='fieldset_td_total' align='center'><b>R$ {$resultado[0]}</b></td>
+            </tr>
+            </table>
+            </fieldset>";
 
         return $html;
     }

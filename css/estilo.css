@@ -1,18 +1,22 @@
-fieldset.RME{
+header.RME{
     width: 785px;
-    height: 1600px;
     color: #444;
     font-family: Helvetica;
     padding: -58px;
     margin: 5px;
 }
 
-fieldset.RMA{
-    width: 900px;
-    margin: 15px auto;
-    color: #444;
-    font-family: Helvetica;
-    padding: 15px;
+fieldset.RME{
+    height: 1600px;
+    padding-top: 52px;
+    padding-bottom: 100px;
+    margin-left: -53px;
+    margin-right: -53px;
+}
+
+table.RME{
+
+
 }
 
 fieldset.RE{
@@ -45,7 +49,7 @@ fieldset.RMSV{
 
 h1{
     text-align: center;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 h1.entrada{
@@ -95,14 +99,56 @@ div.entrada{
 }
 
 /* Classe para o estilo do cabeçalho da Tabela */
-.header_tr{
+.fieldset_tr{
     background: #ddccff;
+    font-size: 10px;
+}
+
+
+.fieldset_th_itens {
+    width: 5%;
+    font-size: 10px;
+}
+
+.fieldset_th_discriminacao {
+    width: 40%;
+    font-size: 10px;
+}
+
+.fieldset_th_qt_alm {
+    width: 10%;
+    font-size: 10px;
+}
+
+.fieldset_th_qt_est {
+    width: 10%;
+    font-size: 10px;
+}
+
+.fieldset_th_qt_uni {
+    width: 10%;
+    font-size: 10px;
+}
+
+.fieldset_th_vl_uni {
+    width: 10%;
+    font-size: 10px;
+}
+
+.fieldset_th_vl_total {
+    width: 10%;
+    font-size: 10px;
+}
+
+.fieldset_td_total {
+    font-size: 12px;
 }
 
 /* Classe para o estilo do cabeçalho da Tabela */
 .cabecalho_RME{
     padding: -1%;
     border: 0px;
+    font-size: 12px;
 }
 
 /* Classe para o estilo do cabeçalho da Tabela de R_E */
