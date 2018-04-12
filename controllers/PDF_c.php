@@ -10,7 +10,8 @@ class PDF_c extends mpdf {
     private $pdf = null;
     private $css = null;
     private $titulo = null;
-    public $itens = 0;
+    private $itens = 0;
+    private $elementos = 0;
 
     /*
     * Construtor da classe
@@ -42,49 +43,76 @@ class PDF_c extends mpdf {
      * Método para gerar somátorio de itens no relatório
      * Não é necessário passar parametros, pois o valor é fixo de 1 a 1.
      */
-    public function somatorio()
+    public function contItens()
     {
         $cont = 1;
         $this->itens = $this->itens + $cont;
         return $this->itens;
     }
 
+    /*
+     * Método para gerar somátorio de elementos no relatório
+     * Não é necessário passar parametros, pois o valor é fixo de 1 a 1.
+     */
+    public function contElementos($value)
+    {
+
+        $cont = 1;
+        $this->elementos = $this->elementos + $cont;
+        return $this->elementos;
+    }
+
+    /*
+    * Método para gerar somátorio de páginas no relatório
+    * Não é necessário passar parametros, pois o valor é fixo de 1 a 1.
+    */
+    public function contPages()
+    {
+        $cont = 1;
+        $this->itens = $this->itens + $cont;
+        return $this->itens;
+    }
+
+    //Construção do Header para o PDF de Material de Escritórioj
+    public function HeaderHTML_RME(){
+
+    }
+
     //Construção do HTML para o PDF de Material de Escritório
-    public function CorpoHTML_R_M_E() {
+    public function CorpoHTML_RME() {
 
         $data = date('d/m/Y');
         $color = null;
         $html .= "
-        <fieldset class='R_M_E'>
+        <fieldset class='RME'>
         <img src=\"img\logo2.jpg\" class='logo'>
-        <div class='cabecalho_R_M_E'>
+        <div class='cabecalho_RME'>
             <h1>FUNDAÇÃO DE SAÚDE DE VITÓRIA DA CONQUISTA $data<br>MATERIAL DE ESCRITÓRIO</h1>
         </div>";
         $html .= " <table width='1000' align='center'>
         <tr class='header_tr'>
             <th class='center'>ITENS</th>
             <th class='left'>DISCRIMINAÇÃO DETALHADA DO PRODUTO</th>
-            <th id='quebra_qtd_alm_R_M_E' class='center'>QTD. ALMOXARIFADO</th>
-            <th id='quebra_qtd_atual_R_M_E' class='center'>QTD. ATUAL</th>
+            <th id='quebra_qtd_alm_RME' class='center'>QTD. ALMOXARIFADO</th>
+            <th id='quebra_qtd_atual_RME' class='center'>QTD. ATUAL</th>
             <th class='center'>VALOR UNITÁRIO</th>
             <th class='center'>VALOR TOTAL</th> 
         </tr>";
 
-        //Chamada do SQL
-        $sql = "select * from produtos";
-        foreach ($this->pdo->query($sql) as $reg):
-            $html .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
-            $html .= "<td class='center'>";
-            $html .= $this->somatorio(); //chama a função que conta os itens
-            $html .= "</td>"; //Itens do relatório
-            $html .= "<td class='left'>{$reg['disc_produto']}</td>"; //descrição do produto
-            $html .= "<td class='center'>{$reg['qt_total']}</td>"; //quantidade total do estoque
-            $html .= "<td class='center'>{$reg['qt_atual']}</td>"; //quantidade atual do estoque
-            $html .= "<td class='center'>R$ {$reg['vl_unitario']}</td>"; //valor unitário do produto
-            $html .= "<td class='center'>R$ {$reg['vl_total']}</td>"; //valor total do produto
-            $color = !$color;
-        endforeach;
-
+            //Chamada do SQL
+            $sql = "select * from produtos";
+            foreach ($this->pdo->query($sql) as $reg):
+                $html .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
+                $html .= "<td class='center'>";
+                $html .= $this->contItens(); //chama a função que conta os itens
+                $html .= "</td>"; //Itens do relatório
+                $html .= "<td class='left'>{$reg['disc_produto']}</td>"; //descrição do produto
+                $html .= "<td class='center'>{$reg['qt_total']}</td>"; //quantidade total do estoque
+                $html .= "<td class='center'>{$reg['qt_atual']}</td>"; //quantidade atual do estoque
+                $html .= "<td class='center'>R$ {$reg['vl_unitario']}</td>"; //valor unitário do produto
+                $html .= "<td class='center'>R$ {$reg['vl_total']}</td>"; //valor total do produto
+                $color = !$color;
+            endforeach;
         $html .= ";
         <tr>
             <td></td>
@@ -104,7 +132,7 @@ class PDF_c extends mpdf {
     }
 
     //Construção do HTML para o PDF de Material do Almoxarifado
-    public function CorpoHTML_R_M_A() {
+    public function CorpoHTML_RMA() {
 
         $data = date('d/m/Y');
         $color = null;
@@ -112,12 +140,12 @@ class PDF_c extends mpdf {
         <fieldset class='R_M_A'>
         <img src=\"img\logo2.jpg\">
         <div class='header'>
-            <h1 id='h1_R_M_A'>Relação de Materiais do Almoxarifado $data</h1>
+            <h1 id='h1_RMA'>Relação de Materiais do Almoxarifado $data</h1>
         </div>";
         $html .= " <table border='1' width='1000' align='center'>
         <tr class='header'>
             <th class='center'>Itens</th>
-            <th id='th_desc_R_S_V' class='center'>Descrição do item</th>
+            <th id='th_desc_RSV' class='center'>Descrição do item</th>
             <th class='center'>Quantitativo</th>
             <th class='center'>U.F</th>
             <th class='center'>Valor Unitário. R$</th>
@@ -129,7 +157,7 @@ class PDF_c extends mpdf {
         foreach ($this->pdo->query($sql) as $reg):
             $html .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
             $html .= "<td class='center'>";
-            $html .= $this->somatorio(); //chama a função que conta os itens
+            $html .= $this->contItens(); //chama a função que conta os itens
             $html .= "</td>"; //Itens do relatório
             $html .= "<td class='left'>{$reg['disc_produto']}</td>"; //descrição do produto
             $html .= "<td class='center'>{$reg['qt_atual']}</td>"; //quantidade total do estoque
@@ -159,20 +187,20 @@ class PDF_c extends mpdf {
     }
 
     //Construção do HTML para o PDF de Material de Serviço Vascular
-    public function CorpoHTML_R_M_S_V() {
+    public function CorpoHTML_RMSV() {
 
         $data = date('d/m/Y');
         $color = null;
         $html .= "
-        <fieldset class='R_M_S_V'>
+        <fieldset class='RMSV'>
         <img src=\"img\logo2.jpg\">
         <div class='header'>
-            <h1 id='h1_R_S_V'>Relação de Materiais do Almoxarifado para Serviço Vascular $data</h1>
+            <h1 id='h1_RSV'>Relação de Materiais do Almoxarifado para Serviço Vascular $data</h1>
         </div>";
         $html .= " <table border='1' width='1000' align='center'>
         <tr class='header'>
             <th class='center'>Itens</th>
-            <th id='th_desc_S_V' class='center'>Descrição do item</th>
+            <th id='th_desc_SV' class='center'>Descrição do item</th>
             <th class='center'>Quantitativo</th>
             <th class='center'>U.F</th>
             <th class='center'>Valor Unitário. R$</th>
@@ -184,7 +212,7 @@ class PDF_c extends mpdf {
         foreach ($this->pdo->query($sql) as $reg):
             $html .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
             $html .= "<td class='center'>";
-            $html .= $this->somatorio(); //chama a função que conta os itens
+            $html .= $this->contItens(); //chama a função que conta os itens
             $html .= "</td>"; //Itens do relatório
             $html .= "<td class='left'>{$reg['disc_produto']}</td>"; //descrição do produto
             $html .= "<td class='center'>{$reg['qt_atual']}</td>"; //quantidade total do estoque
@@ -213,13 +241,13 @@ class PDF_c extends mpdf {
     }
 
     //Construção do HTML para o PDF de Entrada
-    public function CorpoHTML_R_E() {
+    public function CorpoHTML_RE() {
 
         $data = date('d/m/Y');
         $color = null;
 
         $html .= "
-        <fieldset class='R_M_E'>
+        <fieldset class='RME'>
         <img src=\"img\logo1.jpg\">
         <div class='entrada'>
             <h1 class='entrada'>Relatório de Entrada</h1>
@@ -229,14 +257,14 @@ class PDF_c extends mpdf {
         </div>";
         $html .= " <table border='1' width='1000' align='center'>
         <tr class='header_desc'>
-            <th id='th_cod_R_E' class='center'>Código</th>
-            <th id='th_desc_R_E' class='center'>Descrição</th>
-            <th id='th_qtd_R_E' class='center'>Qtd</th>
-            <th id='th_und_R_E' class='center'>Und.</th>
-            <th id='th_vl_custo_R_E' class='center'>Valor de Custo R$</th>
-            <th id='th_vl_total_R_E' class='center'>Valor Total R$</th> 
-            <th id='th_lote_R_E' class='center'>Lote</th> 
-            <th id='th_validade_R_E' class='center'>Validade</th> 
+            <th id='th_cod_RE' class='center'>Código</th>
+            <th id='th_desc_RE' class='center'>Descrição</th>
+            <th id='th_qtd_RE' class='center'>Qtd</th>
+            <th id='th_und_RE' class='center'>Und.</th>
+            <th id='th_vl_custo_RE' class='center'>Valor de Custo R$</th>
+            <th id='th_vl_total_RE' class='center'>Valor Total R$</th> 
+            <th id='th_lote_RE' class='center'>Lote</th> 
+            <th id='th_validade_RE' class='center'>Validade</th> 
         </tr>";
 
         //Chamada do SQL
@@ -244,7 +272,7 @@ class PDF_c extends mpdf {
         foreach ($this->pdo->query($sql) as $reg):
             $html .= ($color) ? "<tr>" : "<tr class=\"zebra\">";
             $html .= "<td class='center'>";
-            $html .= $this->somatorio(); //chama a função que conta os itens
+            $html .= $this->contItens(); //chama a função que conta os itens
             $html .= "</td>"; //Itens do relatório
             $html .= "<td class='left'>{$reg['disc_produto']}</td>"; //descrição do produto
             $html .= "<td class='center'>{$reg['qt_total']}</td>"; //quantidade total do estoque
@@ -286,11 +314,11 @@ class PDF_c extends mpdf {
             case 1: {
                 // Geração do PDF Material de Escritório
                 $this->pdf = new mPDF('utf-8', 'A4');
+                $this->pdf->SetDisplayMode('fullpage');
                 $css = file_get_contents("css/estilo.css");
                 //Parâmetros do Corpo do PDF
-                $this->pdf->SetDisplayMode('fullpage');
                 $this->pdf->WriteHTML($css, 1);
-                $this->pdf->WriteHTML($this->CorpoHTML_R_M_E());
+                $this->pdf->WriteHTML($this->CorpoHTML_RME());
                 //Saída do PDF
                 ob_end_clean(); //limpar objeto antes da geração do PDF
                 $this->pdf->Output();
@@ -309,7 +337,7 @@ class PDF_c extends mpdf {
                 //Parâmetros do Corpo do PDF
                 $this->pdf->SetDisplayMode('fullpage');
                 $this->pdf->WriteHTML($css, 1);
-                $this->pdf->WriteHTML($this->CorpoHTML_R_M_A());
+                $this->pdf->WriteHTML($this->CorpoHTML_RMA());
                 //Saída do PDF
                 ob_end_clean(); //limpar objeto antes da geração do PDF
                 $this->pdf->Output();
@@ -328,7 +356,7 @@ class PDF_c extends mpdf {
                 //Parâmetros do Corpo do PDF
                 $this->pdf->SetDisplayMode('fullpage');
                 $this->pdf->WriteHTML($css, 1);
-                $this->pdf->WriteHTML($this->CorpoHTML_R_M_S_V());
+                $this->pdf->WriteHTML($this->CorpoHTML_RMSV());
                 //Saída do PDF
                 ob_end_clean(); //limpar objeto antes da geração do PDF
                 $this->pdf->Output();
@@ -347,7 +375,7 @@ class PDF_c extends mpdf {
                 //Parâmetros do Corpo do PDF
                 $this->pdf->SetDisplayMode('fullpage');
                 $this->pdf->WriteHTML($css, 1);
-                $this->pdf->WriteHTML($this->CorpoHTML_R_E());
+                $this->pdf->WriteHTML($this->CorpoHTML_RE());
                 //Saída do PDF
                 ob_end_clean(); //limpar objeto antes da geração do PDF
                 $this->pdf->Output();

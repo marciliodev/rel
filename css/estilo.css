@@ -1,4 +1,4 @@
-fieldset.R_M_E{
+fieldset.RME{
     width: 785px;
     height: 1600px;
     color: #444;
@@ -7,7 +7,7 @@ fieldset.R_M_E{
     margin: 5px;
 }
 
-fieldset.R_M_A{
+fieldset.RMA{
     width: 900px;
     margin: 15px auto;
     color: #444;
@@ -15,7 +15,7 @@ fieldset.R_M_A{
     padding: 15px;
 }
 
-fieldset.R_E{
+fieldset.RE{
     width: 900px;
     margin: 15px auto;
     color: #444;
@@ -23,7 +23,7 @@ fieldset.R_E{
     padding: 15px;
 }
 
-fieldset.R_M_S_V{
+fieldset.RMSV{
     width: 900px;
     margin: 15px auto;
     color: #444;
@@ -89,7 +89,7 @@ div.entrada{
 }
 
 /* Classe para o estilo do cabeçalho da Tabela */
-.header{
+.   header{
     background: silver;
     padding: -1%;
 }
@@ -100,7 +100,7 @@ div.entrada{
 }
 
 /* Classe para o estilo do cabeçalho da Tabela */
-.cabecalho_R_M_E{
+.cabecalho_RME{
     padding: -1%;
     border: 0px;
 }
@@ -125,12 +125,12 @@ div.header_1 {
 }
 
 /* Quebra dos cabeçalhos das colunas da tabela de itens*/
-#quebra_qtd_alm_R_M_E {
+#quebra_qtd_alm_RME {
     width: 18%;
 }
 
 /* Quebra dos cabeçalhos das colunas da tabela de itens*/
-#quebra_qtd_atual_R_M_E {
+#quebra_qtd_atual_RME {
     width: 10%;
 }
 
@@ -145,58 +145,56 @@ div.header_1 {
 }
 
 /* h1 do pdf de material de serviço vascular */
-#h1_R_M_A {
+#h1_RMA {
     font-size: 18px;
 }
 
 /* th do pdf de material de serviço vascular */
-#th_desc_R_S_V {
+#th_desc_RSV {
     width: 50%;
 }
 
 /* th do pdf de cod de R_E */
-#th_cod_R_E {
+#th_cod_RE {
     width: 8%;
 }
 
 /* th do pdf de entrada */
-#th_desc_R_E {
+#th_desc_RE {
     width: 40%;
 }
 
 /* th do pdf de material de serviço vascular */
-#th_desc_R_M_A {
+#th_desc_RMA {
     width: 50%;
 }
 
 /* th do pdf de vl_custo de R_E*/
-#th_vl_custo_R_E {
+#th_vl_custo_RE {
     width: 10%;
 }
 
 /* th do pdf de vl_total de R_E*/
-#th_vl_total_R_E {
+#th_vl_total_RE {
     width: 10%;
 }
 
 /* th do pdf de qtd de R_E*/
-#th_qtd_R_E {
+#th_qtd_RE {
     width: 8%;
 }
 
 /* th do pdf de und R_E*/
-#th_und_R_E {
+#th_und_RE {
     width: 8%;
 }
 
 /* th do pdf de lote R_E*/
-#th_lote_R_E {
+#th_lote_RE {
     width: 5%;
 }
 
 /* th do pdf de validade R_E*/
-#th_validade_R_E {
+#th_validade_RE {
     width: 15%;
 }
-
-
